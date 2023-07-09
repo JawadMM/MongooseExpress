@@ -11,49 +11,54 @@ mongoose
     console.log("MONGO ERROR");
   });
 
-const p = new Product({
-  name: "Ruby Grabefruit",
-  price: 1.99,
-  catagory: "fruit",
-});
+// const p = new Product({
+//   name: "Ruby Grabefruit",
+//   price: 1.99,
+//   category: "fruit",
+// });
 
-p.save()
-  .then((p) => {
-    console.log(p);
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+// p.save()
+//   .then((p) => {
+//     console.log(p);
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
 
-const seedProducs = [
+const seedProducts = [
+  {
+    name: "Ruby Grabefruit",
+    price: 1.99,
+    category: "fruit",
+  },
   {
     name: "Fairy Eggplant",
     price: 1.0,
-    catagory: "vegetable",
+    category: "vegetable",
   },
   {
     name: "Organic Melon",
     price: 4.99,
-    catagory: "fruit",
+    category: "fruit",
   },
   {
     name: "Organic Mini Seedless Melon",
     price: 3.99,
-    catagory: "fruit",
+    category: "fruit",
   },
   {
     name: "Organic Celery",
     price: 1.5,
-    catagory: "vegetable",
+    category: "vegetable",
   },
   {
     name: "Chocolate Whole Milk",
     price: 2.99,
-    catagory: "dairy",
+    category: "dairy",
   },
 ];
 
-Product.insertMany(seedProducs)
+Product.insertMany(seedProducts)
   .then((res) => {
     console.log(res);
   })
